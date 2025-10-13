@@ -16,6 +16,7 @@ public class BrowserAndNavigationCommands extends Base{
 		driver.navigate().back();
 		driver.navigate().forward();
 		driver.navigate().refresh();
+		
 	}
 
 	public static void main(String[] args) {
