@@ -3,14 +3,20 @@ package seleniumBasics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
 public class WebElements extends Base{
 	public void verifyCommands() {
-		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
-	
+	driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");		
 	WebElement message=driver.findElement(By.xpath("//input[@id='single-input-field']"));
-	WebElement button=driver.findElement(By.xpath("//button[@id='button-one']"));
-		message.sendKeys("jeffy");
+	message.sendKeys("Jeffy");
+	WebElement button=driver.findElement(By.xpath("//button[@id='button-one']"));				
 		button.click();
+		WebElement yourText=driver.findElement(By.xpath("//div[@id='message-one']"));
+		System.out.println(yourText.getText());
+		WebElement total=driver.findElement(By.id("button-two"));
+		System.out.println(total.getTagName());
+		System.out.println(button.getCssValue("background-color"));
 	}
 
 	public static void main(String[] args) {
@@ -18,6 +24,7 @@ public class WebElements extends Base{
 		element.initializeBrowser();
 		element.verifyCommands();
 
+		
 	}
 
 }
