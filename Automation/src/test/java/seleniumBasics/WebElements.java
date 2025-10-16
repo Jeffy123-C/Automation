@@ -10,7 +10,9 @@ public class WebElements extends Base{
 	driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");		
 	WebElement message=driver.findElement(By.xpath("//input[@id='single-input-field']"));
 	message.sendKeys("Jeffy");
-	WebElement button=driver.findElement(By.xpath("//button[@id='button-one']"));				
+	WebElement button=driver.findElement(By.xpath("//button[@id='button-one']"));
+	System.out.println(button.isDisplayed());
+	System.out.println(button.isEnabled());
 		button.click();
 		WebElement yourText=driver.findElement(By.xpath("//div[@id='message-one']"));
 		System.out.println(yourText.getText());
