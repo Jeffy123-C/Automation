@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class HandlingFrames extends Base{
-	public void verifyframes() {
+	public void verifyFrames() {
 		driver.navigate().to("https://demoqa.com/frames");	
 		List<WebElement>totalframe=driver.findElements(By.tagName("iframe"));
 		System.out.println(totalframe.size());
@@ -20,7 +20,7 @@ public class HandlingFrames extends Base{
 	public static void main(String[] args) {
 		HandlingFrames frame=new HandlingFrames();
 		frame.initializeBrowser();
-		frame.verifyframes();
+		frame.verifyFrames();
 		
 
 	}
