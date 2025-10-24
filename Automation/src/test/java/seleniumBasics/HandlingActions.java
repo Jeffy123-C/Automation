@@ -43,7 +43,7 @@ public class HandlingActions extends Base {
 		HandlingActions action=new HandlingActions();
 		action.initializeBrowser();
 		//action.verifyRightClick();
-		//Actions act=new Actions(driver);action.verifyMouseHover();
+		//action.verifyMouseHover();
 //action.verifyDragAndDrop();	
 try {
 	action.verifyKeyboardAction();
